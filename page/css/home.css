@@ -1,0 +1,664 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.home {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 89vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .statusupload {
+    height: 10dvh;
+    width: 40dvw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fcfcfc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    width: 95%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .title {
+      width: 98%;
+      /* background-color: aqua; */
+      display: flex;
+      height: fit-content;
+
+      h2 {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        margin-left: 20px;
+      }
+    }
+
+    .formdata {
+      height: 8%;
+      width: 96%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: white;
+
+      #imagegaleryform {
+        height: fit-content;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        .select {
+          height: 100%;
+          width: 60%;
+          display: flex;
+          gap: 10px;
+
+          #category {
+            height: 100%;
+            width: 50%;
+            color: black;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+            border: 1px solid #333333;
+          }
+
+          #selectfile {
+            height: 100%;
+            width: 50%;
+            color: black;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+            background-color: #fcfcfc;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #333333;
+            border-radius: 3px;
+          }
+
+          #imagegalery {
+            display: none;
+          }
+        }
+
+        input:nth-child(2) {
+          font-family: "Roboto", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 1rem;
+          border: none;
+          padding: 10px 30px;
+          background-color: rgb(16, 155, 248);
+          border-radius: 10px;
+          cursor: pointer;
+          color: #fcfcfc;
+        }
+      }
+    }
+
+    .prevcontainer {
+      overflow-y: auto;
+      height: 80%;
+      width: 90%;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* border: 1px solid #333333; */
+      /* border-radius: 10px; */
+      /* padding: 30px; */
+
+      .preview {
+        width: 98%;
+        height: inherit;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .item {
+          /* margin: 20px; */
+          height: 200px;
+          width: 200px;
+          float: left;
+          object-fit: cover;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+
+/* belum selesai */
+.backnotif {
+  height: 10dvh;
+  width: 30dvh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.galery {
+  margin-top: 20px;
+  height: 90vh;
+  width: 100%;
+
+  .container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .header {
+      height: 15%;
+      width: 98%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .galerytitle {
+        height: 50%;
+        width: 90%;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        overflow: hidden;
+
+        p {
+          /* padding: 0; */
+          font-size: 1.1rem;
+        }
+      }
+
+      .leftstage {
+        height: 50%;
+        width: 90%;
+        display: flex;
+        gap: 20px;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+
+        .multiple {
+          button {
+            cursor: pointer;
+            border: none;
+            background-color: white;
+          }
+        }
+
+        .delbutton {
+          height: 30px;
+          width: 80px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          button {
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            border: none;
+            background-color: rgb(255, 128, 128);
+            color: white;
+            border-radius: 5px;
+          }
+
+          button:hover {
+            background-color: rgb(255, 76, 76);
+          }
+        }
+
+        .shortdate {
+          height: 100%;
+          width: 30%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: "Roboto", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          color: black;
+          font-size: 0.9rem;
+          gap: 10px;
+
+          #category {
+            width: 70%;
+
+            option {
+              margin-top: 10px;
+              padding: 5px;
+            }
+          }
+        }
+
+        .shortcat {
+          height: 100%;
+          width: 30%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: "Roboto", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          color: black;
+          font-size: 0.9rem;
+          gap: 10px;
+
+          #date {
+            width: 70%;
+
+            option {
+              margin-top: 10px;
+              padding: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    .galerycontainer {
+      height: 78%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: auto;
+
+      .galeryimage {
+        height: 95%;
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .imagelist {
+          height: 200px;
+          width: 200px;
+          float: left;
+          object-fit: cover;
+          overflow: hidden;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            height: 200px;
+            width: 200px;
+            float: left;
+            object-fit: cover;
+            overflow: hidden;
+            cursor: pointer;
+          }
+        }
+      }
+
+      /* .selectimage {
+        height: 95%;
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        img {
+          height: 150px;
+          width: 150px;
+          float: left;
+          object-fit: cover;
+          overflow: hidden;
+          cursor: pointer;
+        }
+      } */
+      /* background-color: aquamarine; */
+    }
+
+    .pagination {
+      /* background-color: #333333; */
+      height: 5%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        height: 90%;
+        width: fit-content;
+        padding: 0 10px;
+        border: none;
+        background-color: #fcfcfc;
+        margin: 0 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.galerymodal {
+  top: 20px;
+  width: 99%;
+  height: 90vh;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  display: none;
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
+
+  .container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    .modalheader {
+      height: 8%;
+      width: 99%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(228, 228, 228);
+
+      .modaltitle {
+        /* background-color: aqua; */
+        height: 70%;
+        width: 98%;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+
+        .modalwraper {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          /* flex-direction: column; */
+
+          #close {
+            height: 20px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .modalbody {
+      height: 88%;
+      width: 99%;
+      display: flex;
+
+      .imageview {
+        width: 50%;
+        height: 100%;
+
+        .image {
+          height: 100%;
+          width: 100%;
+          float: left;
+          object-fit: cover;
+          overflow: hidden;
+        }
+      }
+
+      .imagedetail {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .detailwraper {
+          height: 98%;
+          width: 98%;
+          border-radius: 5px;
+          border: 1px solid rgb(207, 207, 207);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+
+          .readonlydetail {
+            height: 35%;
+            width: 98%;
+            background-color: rgb(235, 235, 235);
+
+            #title {
+              margin-left: 20px;
+            }
+
+            .detail {
+              margin-left: 30px;
+              height: 70%;
+              width: 93%;
+              line-height: 10px;
+
+              table {
+                height: 100%;
+                width: 100%;
+              }
+
+              tr {
+                height: fit-content;
+                line-height: 20px;
+              }
+
+              tr td:nth-child(1) {
+                width: 40%;
+              }
+            }
+          }
+
+          .formdetail {
+            height: 61%;
+            width: 98%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+            .formtitle {
+              width: 100%;
+              height: 15%;
+            }
+
+            .form {
+              height: 80%;
+              width: 98%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              /* gap: 10px; */
+              flex-direction: column;
+
+              .formbox {
+                height: 50px;
+                width: 98%;
+                display: flex;
+                justify-content: center;
+
+                .label {
+                  height: 100%;
+                  width: 20%;
+                  display: flex;
+                  align-items: center;
+                }
+
+                .input {
+                  height: 100%;
+                  width: 70%;
+                  display: flex;
+                  align-items: center;
+
+                  input {
+                    width: 100%;
+                  }
+
+                  .update {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    button {
+                      background-color: rgb(104, 104, 255);
+                      border: none;
+                      font-size: 0.9rem;
+                      color: white;
+                      padding: 5px 40px;
+                      border-radius: 5px;
+                      cursor: pointer;
+                    }
+                  }
+                }
+              }
+
+              .formbox:nth-child(2) {
+                height: 90px;
+                width: 98%;
+                display: flex;
+                justify-content: center;
+
+                .label {
+                  height: 100%;
+                  width: 20%;
+                  display: flex;
+                  align-items: center;
+                }
+
+                .input {
+                  height: 100%;
+                  width: 70%;
+                  display: flex;
+                  align-items: center;
+
+                  textarea {
+                    width: 100%;
+                    height: 90%;
+                  }
+                }
+              }
+
+              .buttonform {
+                height: 25%;
+                width: 98%;
+                background-color: #fcfcfc;
+                display: flex;
+                flex-direction: column;
+
+                #notification {
+                  height: 50%;
+                  width: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background-color: aqua;
+                  opacity: 0;
+                }
+
+                .delete {
+                  height: 50%;
+                  width: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+
+                  a {
+                    color: red;
+                  }
+                }
+              }
+            }
+          }
+
+          /* .buttonaction {
+            height: 23%;
+            width: 98%;
+            background-color: aqua;
+          } */
+        }
+      }
+    }
+  }
+}
+
+#notification {
+  display: none;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    scale: 40%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    scale: 40%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+    scale: 100%;
+  }
+  to {
+    opacity: 0;
+    scale: 40%;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    scale: 100%;
+  }
+  to {
+    opacity: 0;
+    scale: 40%;
+  }
+}
